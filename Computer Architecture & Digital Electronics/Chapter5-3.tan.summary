@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.968 ns
+From           : 4bit_count_async:inst|FF:inst21|inst
+To             : Q3
+From Clock     : cp
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'cp'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 250.88 MHz ( period = 3.986 ns )
+From           : 4bit_count_async:inst|FF:inst21|inst
+To             : 4bit_count_async:inst|FF:inst21|inst
+From Clock     : cp
+To Clock       : cp
+Failed Paths   : 0
+
+Type           : Clock Hold: 'cp'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : 4bit_count_async:inst|FF:inst21|inst
+To             : 4bit_count_async:inst|FF:inst21|inst
+From Clock     : cp
+To Clock       : cp
+Failed Paths   : 2
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 2
+
+--------------------------------------------------------------------------------------
+
