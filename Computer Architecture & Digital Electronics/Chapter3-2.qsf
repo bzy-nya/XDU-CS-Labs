@@ -16,9 +16,9 @@
 #
 # -------------------------------------------------------------------------- #
 #
-# Quartus II 64-Bit
+# Quartus II
 # Version 9.0 Build 132 02/25/2009 SJ Full Version
-# Date created = 21:25:23  April 17, 2022
+# Date created = 22:52:25  May 25, 2022
 #
 # -------------------------------------------------------------------------- #
 #
@@ -36,20 +36,20 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Stratix II"
-set_global_assignment -name DEVICE AUTO
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C40Q240C8
 set_global_assignment -name TOP_LEVEL_ENTITY "Chapter3-2"
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:25:23  APRIL 17, 2022"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:52:25  MAY 25, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION 9.0
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
-set_global_assignment -name DEVICE_FILTER_SPEED_GRADE FASTEST
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name BDF_FILE "Chapter3-2.bdf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_global_assignment -name BDF_FILE "Chapter3-2.bdf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE wave2.vwf
-set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE wave2.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "wave3-1.vwf"

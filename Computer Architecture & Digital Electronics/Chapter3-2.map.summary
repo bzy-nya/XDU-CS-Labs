@@ -1,15 +1,14 @@
-Analysis & Synthesis Status : Successful - Sun Apr 17 21:41:32 2022
+Analysis & Synthesis Status : Successful - Sun May 29 14:22:31 2022
 Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
 Revision Name : Chapter3-2
 Top-level Entity Name : Chapter3-2
-Family : Stratix II
-Logic utilization : N/A
-    Combinational ALUTs : 6
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 13
+Family : Cyclone III
+Total logic elements : 6
+    Total combinational functions : 2
+    Dedicated logic registers : 5
+Total registers : 5
+Total pins : 6
 Total virtual pins : 0
-Total block memory bits : 0
-DSP block 9-bit elements : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
-Total DLLs : 0

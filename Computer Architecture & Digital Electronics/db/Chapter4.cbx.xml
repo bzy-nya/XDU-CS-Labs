@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Chapter4">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Chapter4|BUSMUX:inst1|lpm_mux:$00000" CBX_FILE_NAME="mux_5qc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Chapter4|lpm_counter2:inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_25j.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

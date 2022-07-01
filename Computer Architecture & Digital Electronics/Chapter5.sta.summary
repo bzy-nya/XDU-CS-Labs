@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'RAM'
+Slack : -2.707
+TNS   : -23.769
+
+Type  : Slow 1200mV 85C Model Setup 'setR0'
+Slack : -2.405
+TNS   : -12.462
+
+Type  : Slow 1200mV 85C Model Setup 'setAR'
+Slack : -2.056
+TNS   : -11.285
+
+Type  : Slow 1200mV 85C Model Hold 'RAM'
+Slack : -0.028
+TNS   : -0.028
+
+Type  : Slow 1200mV 85C Model Hold 'setAR'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'setR0'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'RAM'
+Slack : -2.370
+TNS   : -20.911
+
+Type  : Slow 1200mV 0C Model Setup 'setR0'
+Slack : -2.215
+TNS   : -11.171
+
+Type  : Slow 1200mV 0C Model Setup 'setAR'
+Slack : -1.874
+TNS   : -10.093
+
+Type  : Slow 1200mV 0C Model Hold 'RAM'
+Slack : -0.044
+TNS   : -0.044
+
+Type  : Slow 1200mV 0C Model Hold 'setAR'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'setR0'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'setR0'
+Slack : -0.474
+TNS   : -1.242
+
+Type  : Fast 1200mV 0C Model Setup 'RAM'
+Slack : -0.362
+TNS   : -3.073
+
+Type  : Fast 1200mV 0C Model Setup 'setAR'
+Slack : -0.317
+TNS   : -0.742
+
+Type  : Fast 1200mV 0C Model Hold 'RAM'
+Slack : -0.044
+TNS   : -0.044
+
+Type  : Fast 1200mV 0C Model Hold 'setAR'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'setR0'
+Slack : 0.187
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Chapter3
-Sun Apr 17 21:19:22 2022
-Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
+Wed May 25 22:39:36 2022
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
 ---------------------
@@ -13,7 +13,8 @@ Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
-  8. Analysis & Synthesis Messages
+  8. Inverted Register Statistics
+  9. Analysis & Synthesis Messages
 
 
 
@@ -36,25 +37,24 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                             ;
-+-------------------------------+------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Sun Apr 17 21:19:22 2022    ;
-; Quartus II 64-Bit Version     ; 9.0 Build 132 02/25/2009 SJ Full Version ;
-; Revision Name                 ; Chapter3                                 ;
-; Top-level Entity Name         ; Chapter3                                 ;
-; Family                        ; Stratix II                               ;
-; Logic utilization             ; N/A                                      ;
-;     Combinational ALUTs       ; 2                                        ;
-;     Dedicated logic registers ; 0                                        ;
-; Total registers               ; 0                                        ;
-; Total pins                    ; 4                                        ;
-; Total virtual pins            ; 0                                        ;
-; Total block memory bits       ; 0                                        ;
-; DSP block 9-bit elements      ; 0                                        ;
-; Total PLLs                    ; 0                                        ;
-; Total DLLs                    ; 0                                        ;
-+-------------------------------+------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed May 25 22:39:36 2022    ;
+; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name                      ; Chapter3                                 ;
+; Top-level Entity Name              ; Chapter3                                 ;
+; Family                             ; Cyclone III                              ;
+; Total logic elements               ; 4                                        ;
+;     Total combinational functions  ; 2                                        ;
+;     Dedicated logic registers      ; 4                                        ;
+; Total registers                    ; 4                                        ;
+; Total pins                         ; 6                                        ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -62,8 +62,9 @@ applicable agreement for further details.
 +----------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                         ; Setting            ; Default Value      ;
 +----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP3C40Q240C8       ;                    ;
 ; Top-level entity name                                          ; Chapter3           ; Chapter3           ;
-; Family name                                                    ; Stratix II         ; Stratix II         ;
+; Family name                                                    ; Cyclone III        ; Stratix II         ;
 ; Use Generated Physical Constraints File                        ; Off                ;                    ;
 ; Use smart compilation                                          ; Off                ; Off                ;
 ; Restructure Multiplexers                                       ; Auto               ; Auto               ;
@@ -133,62 +134,51 @@ applicable agreement for further details.
 +----------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                            ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------+
-; Chapter3.bdf                     ; yes             ; User Block Diagram/Schematic File  ; D:/Learning Resource/homework/数电模电仿真/Chapter3.bdf ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                        ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------+
+; Chapter3.bdf                     ; yes             ; User Block Diagram/Schematic File  ; D:/Learning Resource/homework/计组实验/Chapter3.bdf ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+-----------------------------------------------+-------+
-; Resource                                      ; Usage ;
-+-----------------------------------------------+-------+
-; Estimated ALUTs Used                          ; 2     ;
-; Dedicated logic registers                     ; 0     ;
-;                                               ;       ;
-; Estimated ALUTs Unavailable                   ; 0     ;
-;                                               ;       ;
-; Total combinational functions                 ; 2     ;
-; Combinational ALUT usage by number of inputs  ;       ;
-;     -- 7 input functions                      ; 0     ;
-;     -- 6 input functions                      ; 0     ;
-;     -- 5 input functions                      ; 0     ;
-;     -- 4 input functions                      ; 0     ;
-;     -- <=3 input functions                    ; 2     ;
-;                                               ;       ;
-; Combinational ALUTs by mode                   ;       ;
-;     -- normal mode                            ; 2     ;
-;     -- extended LUT mode                      ; 0     ;
-;     -- arithmetic mode                        ; 0     ;
-;     -- shared arithmetic mode                 ; 0     ;
-;                                               ;       ;
-; Estimated ALUT/register pairs used            ; 2     ;
-;                                               ;       ;
-; Total registers                               ; 0     ;
-;     -- Dedicated logic registers              ; 0     ;
-;     -- I/O registers                          ; 0     ;
-;                                               ;       ;
-; Estimated ALMs:  partially or completely used ; 1     ;
-;                                               ;       ;
-; I/O pins                                      ; 4     ;
-; Maximum fan-out node                          ; B     ;
-; Maximum fan-out                               ; 2     ;
-; Total fan-out                                 ; 6     ;
-; Average fan-out                               ; 1.00  ;
-+-----------------------------------------------+-------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 4           ;
+;                                             ;             ;
+; Total combinational functions               ; 2           ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 0           ;
+;     -- 3 input functions                    ; 0           ;
+;     -- <=2 input functions                  ; 2           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 2           ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 4           ;
+;     -- Dedicated logic registers            ; 4           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 6           ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 4           ;
+; Total fan-out                               ; 24          ;
+; Average fan-out                             ; 1.33        ;
++---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; |Chapter3                  ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 4    ; 0            ; |Chapter3           ; work         ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |Chapter3                  ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |Chapter3           ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -197,37 +187,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; inst                                   ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Sun Apr 17 21:19:22 2022
+    Info: Processing started: Wed May 25 22:39:36 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Chapter3 -c Chapter3
 Info: Found 1 design units, including 1 entities, in source file Chapter3.bdf
     Info: Found entity 1: Chapter3
-Info: Found 1 design units, including 1 entities, in source file whole.bdf
-    Info: Found entity 1: whole
 Info: Elaborating entity "Chapter3" for the top level hierarchy
-Info: Implemented 6 device resources after synthesis - the final resource count might be different
+Info: Registers with preset signals will power-up high
+Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info: Implemented 10 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
-    Info: Implemented 2 output pins
-    Info: Implemented 2 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4420 megabytes
-    Info: Processing ended: Sun Apr 17 21:19:22 2022
+    Info: Implemented 4 output pins
+    Info: Implemented 4 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 229 megabytes
+    Info: Processing ended: Wed May 25 22:39:36 2022
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

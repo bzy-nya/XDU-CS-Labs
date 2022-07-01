@@ -1,6 +1,6 @@
 Flow report for Chapter3
-Sun Apr 17 21:19:26 2022
-Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
+Wed May 25 22:39:46 2022
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
 ---------------------
@@ -35,28 +35,27 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------+
-; Flow Summary                                                             ;
-+-------------------------------+------------------------------------------+
-; Flow Status                   ; Successful - Sun Apr 17 21:19:26 2022    ;
-; Quartus II 64-Bit Version     ; 9.0 Build 132 02/25/2009 SJ Full Version ;
-; Revision Name                 ; Chapter3                                 ;
-; Top-level Entity Name         ; Chapter3                                 ;
-; Family                        ; Stratix II                               ;
-; Met timing requirements       ; Yes                                      ;
-; Logic utilization             ; < 1 %                                    ;
-;     Combinational ALUTs       ; 2 / 12,480 ( < 1 % )                     ;
-;     Dedicated logic registers ; 0 / 12,480 ( 0 % )                       ;
-; Total registers               ; 0                                        ;
-; Total pins                    ; 4 / 343 ( 1 % )                          ;
-; Total virtual pins            ; 0                                        ;
-; Total block memory bits       ; 0 / 419,328 ( 0 % )                      ;
-; DSP block 9-bit elements      ; 0 / 96 ( 0 % )                           ;
-; Total PLLs                    ; 0 / 6 ( 0 % )                            ;
-; Total DLLs                    ; 0 / 2 ( 0 % )                            ;
-; Device                        ; EP2S15F484C3                             ;
-; Timing Models                 ; Final                                    ;
-+-------------------------------+------------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++------------------------------------+------------------------------------------+
+; Flow Status                        ; Successful - Wed May 25 22:39:44 2022    ;
+; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name                      ; Chapter3                                 ;
+; Top-level Entity Name              ; Chapter3                                 ;
+; Family                             ; Cyclone III                              ;
+; Device                             ; EP3C40Q240C8                             ;
+; Timing Models                      ; Final                                    ;
+; Met timing requirements            ; N/A                                      ;
+; Total logic elements               ; 4 / 39,600 ( < 1 % )                     ;
+;     Total combinational functions  ; 2 / 39,600 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 4 / 39,600 ( < 1 % )                     ;
+; Total registers                    ; 4                                        ;
+; Total pins                         ; 6 / 129 ( 5 % )                          ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0 / 1,161,216 ( 0 % )                    ;
+; Embedded Multiplier 9-bit elements ; 0 / 252 ( 0 % )                          ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                            ;
++------------------------------------+------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/17/2022 21:19:22 ;
+; Start date & time ; 05/25/2022 22:39:36 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Chapter3            ;
 +-------------------+---------------------+
@@ -75,36 +74,39 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 145984434500749.165020156214184 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 145984434500749.165348957617760 ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --          ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE        ; 1.2V                            ; --            ; --          ; --             ;
 ; PARTITION_COLOR                    ; 16764057                        ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; --          ; Top            ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_blast_fpga ;
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                           ;
-+-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:00     ; 1.0                     ; 4415 MB             ; 00:00:00                           ;
-; Fitter                  ; 00:00:02     ; 1.0                     ; 4513 MB             ; 00:00:02                           ;
-; Assembler               ; 00:00:00     ; 1.0                     ; 4358 MB             ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 4351 MB             ; 00:00:00                           ;
-; Total                   ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
-+-------------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:00     ; 1.0                     ; 224 MB              ; 00:00:00                           ;
+; Fitter                    ; 00:00:04     ; 1.0                     ; 368 MB              ; 00:00:04                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 286 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 283 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:08     ; --                      ; --                  ; 00:00:07                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                          ;
-+-------------------------+------------------+---------------+------------+----------------+
-; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
-+-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; LAPTOP-6KM3L9K2  ; Windows Vista ; 6.2        ; x86_64         ;
-; Fitter                  ; LAPTOP-6KM3L9K2  ; Windows Vista ; 6.2        ; x86_64         ;
-; Assembler               ; LAPTOP-6KM3L9K2  ; Windows Vista ; 6.2        ; x86_64         ;
-; Classic Timing Analyzer ; LAPTOP-6KM3L9K2  ; Windows Vista ; 6.2        ; x86_64         ;
-+-------------------------+------------------+---------------+------------+----------------+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++---------------------------+------------------+---------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++---------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis      ; LAPTOP-6KM3L9K2  ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-6KM3L9K2  ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-6KM3L9K2  ; Windows Vista ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-6KM3L9K2  ; Windows Vista ; 6.2        ; x86_64         ;
++---------------------------+------------------+---------------+------------+----------------+
 
 
 ------------
@@ -113,7 +115,7 @@ applicable agreement for further details.
 quartus_map --read_settings_files=on --write_settings_files=off Chapter3 -c Chapter3
 quartus_fit --read_settings_files=off --write_settings_files=off Chapter3 -c Chapter3
 quartus_asm --read_settings_files=off --write_settings_files=off Chapter3 -c Chapter3
-quartus_tan --read_settings_files=off --write_settings_files=off Chapter3 -c Chapter3 --timing_analysis_only
+quartus_sta Chapter3 -c Chapter3
 
 
 

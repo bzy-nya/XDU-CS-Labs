@@ -1,0 +1,15 @@
+|Chapter3
+T1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst.CLK
+clock => inst3.CLK
+clock => inst2.CLK
+clock => inst1.CLK
+reset => inst3.ACLR
+reset => inst2.ACLR
+reset => inst1.ACLR
+reset => inst.PRESET
+T2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+T3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+T4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+

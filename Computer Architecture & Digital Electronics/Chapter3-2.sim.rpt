@@ -1,5 +1,5 @@
 Simulator report for Chapter3-2
-Sun Apr 17 21:42:01 2022
+Sun May 29 14:22:44 2022
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -45,41 +45,44 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 30 nodes     ;
-; Simulation Coverage         ;      93.33 % ;
-; Total Number of Transitions ; 4163         ;
+; Simulation Netlist Size     ; 24 nodes     ;
+; Simulation Coverage         ;     100.00 % ;
+; Total Number of Transitions ; 585          ;
 ; Simulation Breakpoints      ; 0            ;
-; Family                      ; Stratix II   ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C40Q240C8 ;
 +-----------------------------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                      ;
-+--------------------------------------------------------------------------------------------+------------+---------------+
-; Option                                                                                     ; Setting    ; Default Value ;
-+--------------------------------------------------------------------------------------------+------------+---------------+
-; Simulation mode                                                                            ; Functional ; Timing        ;
-; Start time                                                                                 ; 0 ns       ; 0 ns          ;
-; Simulation results format                                                                  ; CVWF       ;               ;
-; Vector input source                                                                        ; wave2.vwf  ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
-; Check outputs                                                                              ; Off        ; Off           ;
-; Report simulation coverage                                                                 ; On         ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
-; Display missing 1-value coverage report                                                    ; On         ; On            ;
-; Display missing 0-value coverage report                                                    ; On         ; On            ;
-; Detect setup and hold time violations                                                      ; Off        ; Off           ;
-; Detect glitches                                                                            ; Off        ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
-; Generate Signal Activity File                                                              ; Off        ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
-; Group bus channels in simulation results                                                   ; Off        ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
-+--------------------------------------------------------------------------------------------+------------+---------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                       ;
++--------------------------------------------------------------------------------------------+-------------+---------------+
+; Option                                                                                     ; Setting     ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------+---------------+
+; Simulation mode                                                                            ; Timing      ; Timing        ;
+; Start time                                                                                 ; 0 ns        ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF        ;               ;
+; Vector input source                                                                        ; wave3-1.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On          ; On            ;
+; Check outputs                                                                              ; Off         ; Off           ;
+; Report simulation coverage                                                                 ; On          ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On          ; On            ;
+; Display missing 1-value coverage report                                                    ; On          ; On            ;
+; Display missing 0-value coverage report                                                    ; On          ; On            ;
+; Detect setup and hold time violations                                                      ; Off         ; Off           ;
+; Detect glitches                                                                            ; Off         ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off         ; Off           ;
+; Generate Signal Activity File                                                              ; Off         ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off         ; Off           ;
+; Group bus channels in simulation results                                                   ; Off         ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On          ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE  ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off         ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto        ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport   ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport   ; Transport     ;
++--------------------------------------------------------------------------------------------+-------------+---------------+
 
 
 +----------------------+
@@ -94,73 +97,63 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      93.33 % ;
-; Total nodes checked                                 ; 30           ;
-; Total output ports checked                          ; 30           ;
-; Total output ports with complete 1/0-value coverage ; 28           ;
-; Total output ports with no 1/0-value coverage       ; 2            ;
-; Total output ports with no 1-value coverage         ; 2            ;
-; Total output ports with no 0-value coverage         ; 2            ;
+; Total coverage as a percentage                      ;     100.00 % ;
+; Total nodes checked                                 ; 24           ;
+; Total output ports checked                          ; 24           ;
+; Total output ports with complete 1/0-value coverage ; 24           ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 0            ;
+; Total output ports with no 0-value coverage         ; 0            ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+------------------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                                      ;
-+-----------------------------------------------+-----------------------------------------------+------------------+
-; Node Name                                     ; Output Port Name                              ; Output Port Type ;
-+-----------------------------------------------+-----------------------------------------------+------------------+
-; |Chapter3-2|S0                                ; |Chapter3-2|S0                                ; pin_out          ;
-; |Chapter3-2|A3                                ; |Chapter3-2|A3                                ; out              ;
-; |Chapter3-2|B3                                ; |Chapter3-2|B3                                ; out              ;
-; |Chapter3-2|A2                                ; |Chapter3-2|A2                                ; out              ;
-; |Chapter3-2|B2                                ; |Chapter3-2|B2                                ; out              ;
-; |Chapter3-2|A1                                ; |Chapter3-2|A1                                ; out              ;
-; |Chapter3-2|A0                                ; |Chapter3-2|A0                                ; out              ;
-; |Chapter3-2|B0                                ; |Chapter3-2|B0                                ; out              ;
-; |Chapter3-2|S1                                ; |Chapter3-2|S1                                ; pin_out          ;
-; |Chapter3-2|S2                                ; |Chapter3-2|S2                                ; pin_out          ;
-; |Chapter3-2|S3                                ; |Chapter3-2|S3                                ; pin_out          ;
-; |Chapter3-2|E                                 ; |Chapter3-2|E                                 ; pin_out          ;
-; |Chapter3-2|4bit_sum:inst|whole:inst3|inst2   ; |Chapter3-2|4bit_sum:inst|whole:inst3|inst2   ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst3|inst    ; |Chapter3-2|4bit_sum:inst|whole:inst3|inst    ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst3|inst3   ; |Chapter3-2|4bit_sum:inst|whole:inst3|inst3   ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst3|inst9   ; |Chapter3-2|4bit_sum:inst|whole:inst3|inst9   ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst3|inst8   ; |Chapter3-2|4bit_sum:inst|whole:inst3|inst8   ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst2|inst2   ; |Chapter3-2|4bit_sum:inst|whole:inst2|inst2   ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst2|inst    ; |Chapter3-2|4bit_sum:inst|whole:inst2|inst    ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst2|inst3   ; |Chapter3-2|4bit_sum:inst|whole:inst2|inst3   ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst2|inst9   ; |Chapter3-2|4bit_sum:inst|whole:inst2|inst9   ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst2|inst8   ; |Chapter3-2|4bit_sum:inst|whole:inst2|inst8   ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst1|inst2   ; |Chapter3-2|4bit_sum:inst|whole:inst1|inst2   ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst1|inst    ; |Chapter3-2|4bit_sum:inst|whole:inst1|inst    ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst1|inst3   ; |Chapter3-2|4bit_sum:inst|whole:inst1|inst3   ; out0             ;
-; |Chapter3-2|4bit_sum:inst|whole:inst1|inst9   ; |Chapter3-2|4bit_sum:inst|whole:inst1|inst9   ; out0             ;
-; |Chapter3-2|4bit_sum:inst|Chapter3:inst|inst8 ; |Chapter3-2|4bit_sum:inst|Chapter3:inst|inst8 ; out0             ;
-; |Chapter3-2|4bit_sum:inst|Chapter3:inst|inst  ; |Chapter3-2|4bit_sum:inst|Chapter3:inst|inst  ; out0             ;
-+-----------------------------------------------+-----------------------------------------------+------------------+
++------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                        ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |Chapter3-2|inst               ; |Chapter3-2|inst               ; q                ;
+; |Chapter3-2|inst1              ; |Chapter3-2|inst1              ; q                ;
+; |Chapter3-2|inst2              ; |Chapter3-2|inst2              ; q                ;
+; |Chapter3-2|inst3              ; |Chapter3-2|inst3              ; q                ;
+; |Chapter3-2|inst5~0            ; |Chapter3-2|inst5~0            ; combout          ;
+; |Chapter3-2|inst4              ; |Chapter3-2|inst4              ; q                ;
+; |Chapter3-2|inst6              ; |Chapter3-2|inst6              ; combout          ;
+; |Chapter3-2|T1~output          ; |Chapter3-2|T1~output          ; o                ;
+; |Chapter3-2|T1                 ; |Chapter3-2|T1                 ; padout           ;
+; |Chapter3-2|T2~output          ; |Chapter3-2|T2~output          ; o                ;
+; |Chapter3-2|T2                 ; |Chapter3-2|T2                 ; padout           ;
+; |Chapter3-2|T3~output          ; |Chapter3-2|T3~output          ; o                ;
+; |Chapter3-2|T3                 ; |Chapter3-2|T3                 ; padout           ;
+; |Chapter3-2|T4~output          ; |Chapter3-2|T4~output          ; o                ;
+; |Chapter3-2|T4                 ; |Chapter3-2|T4                 ; padout           ;
+; |Chapter3-2|reset~input        ; |Chapter3-2|reset~input        ; o                ;
+; |Chapter3-2|reset              ; |Chapter3-2|reset              ; padout           ;
+; |Chapter3-2|clock~input        ; |Chapter3-2|clock~input        ; o                ;
+; |Chapter3-2|clock              ; |Chapter3-2|clock              ; padout           ;
+; |Chapter3-2|reset~inputclkctrl ; |Chapter3-2|reset~inputclkctrl ; outclk           ;
+; |Chapter3-2|inst6~clkctrl      ; |Chapter3-2|inst6~clkctrl      ; outclk           ;
+; |Chapter3-2|inst1~feeder       ; |Chapter3-2|inst1~feeder       ; combout          ;
+; |Chapter3-2|inst2~feeder       ; |Chapter3-2|inst2~feeder       ; combout          ;
+; |Chapter3-2|inst3~feeder       ; |Chapter3-2|inst3~feeder       ; combout          ;
++--------------------------------+--------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+--------------------------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                                     ;
-+---------------------------------------------+---------------------------------------------+------------------+
-; Node Name                                   ; Output Port Name                            ; Output Port Type ;
-+---------------------------------------------+---------------------------------------------+------------------+
-; |Chapter3-2|B1                              ; |Chapter3-2|B1                              ; out              ;
-; |Chapter3-2|4bit_sum:inst|whole:inst1|inst8 ; |Chapter3-2|4bit_sum:inst|whole:inst1|inst8 ; out0             ;
-+---------------------------------------------+---------------------------------------------+------------------+
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+--------------------------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                                     ;
-+---------------------------------------------+---------------------------------------------+------------------+
-; Node Name                                   ; Output Port Name                            ; Output Port Type ;
-+---------------------------------------------+---------------------------------------------+------------------+
-; |Chapter3-2|B1                              ; |Chapter3-2|B1                              ; out              ;
-; |Chapter3-2|4bit_sum:inst|whole:inst1|inst8 ; |Chapter3-2|4bit_sum:inst|whole:inst1|inst8 ; out0             ;
-+---------------------------------------------+---------------------------------------------+------------------+
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
 
 
 +---------------------+
@@ -176,17 +169,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Sun Apr 17 21:42:01 2022
+    Info: Processing started: Sun May 29 14:22:44 2022
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Chapter3-2 -c Chapter3-2
-Info: Using vector source file "D:/Learning Resource/homework/数电模电仿真/wave2.vwf"
+Info: Using vector source file "D:/Learning Resource/homework/计组实验/wave3-1.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      93.33 %
-Info: Number of transitions in simulation is 4163
+Info: Simulation coverage is     100.00 %
+Info: Number of transitions in simulation is 585
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 155 megabytes
-    Info: Processing ended: Sun Apr 17 21:42:01 2022
+    Info: Peak virtual memory: 164 megabytes
+    Info: Processing ended: Sun May 29 14:22:44 2022
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
