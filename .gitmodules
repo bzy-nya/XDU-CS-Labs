@@ -1,0 +1,3 @@
+[submodule "Rucbase Lab/deps/googletest"]
+	path = Rucbase Lab/deps/googletest
+	url = https://github.com/google/googletest.git
