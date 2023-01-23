@@ -5,5 +5,7 @@ members = [
     "chapter5",
     "chapter6",
     "chapter8",
-    "chapter_ex"
+    "chapter_ex1",
+    "chapter_ex2",
+    "gl"
 ]
