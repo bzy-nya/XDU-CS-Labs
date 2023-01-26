@@ -10,6 +10,7 @@ use gl::vertex::Vertex;
 use glium::Display;
 use glium::Surface;
 use glium::glutin::event::ElementState;
+use glium::glutin::event::VirtualKeyCode;
 
 pub fn draw_cube_stretch(display: &Display, t: f32) {
     let program = shader::get_default_shader(&display);
@@ -152,7 +153,12 @@ fn main() {
                         { action = action::Action::Stop; },
                     glutin::event::WindowEvent::KeyboardInput { device_id: _, input, is_synthetic:_ } =>
                         { match input.state {
-                            ElementState::Pressed => {step += 1;}
+                            ElementState::Pressed => { 
+                                match input.virtual_keycode {
+                                    Some(VirtualKeyCode::Space) => { step += 1; }
+                                   _ => {}
+                                }   
+                            }
                             _ => {}
                         } }
                     _ => (),

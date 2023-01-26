@@ -159,6 +159,10 @@ dependencies = [
 [[package]]
 name = "chapter_ex2"
 version = "0.1.0"
+dependencies = [
+ "gl",
+ "glium",
+]
 
 [[package]]
 name = "cmake"

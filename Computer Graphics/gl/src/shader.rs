@@ -67,6 +67,24 @@ pub const SPECULAR_FRAGMENT_SHADER: &str = r#"
     }
 "#;
 
+pub const COLORED_FRAGMENT_SHADER: &str = r#"
+    #version 140
+    in vec3 v_normal;
+    out vec4 f_color;
+
+    uniform vec3 light;
+    uniform float shininess; 
+    uniform vec3 color;
+
+    void main() {
+        float lum  = max( dot(normalize(v_normal), normalize(light)), 0.0);
+        vec3 half_dir = normalize(light + vec3(0.0, 0.0, -1.0));
+        float spec = pow(max( dot( normalize(v_normal), half_dir ), 0.0), shininess);
+        vec3 ret_color = (0.1 + 0.1 * lum + 0.8 * spec) * color;
+        f_color = vec4(color, 1.0);
+    }
+"#;
+
 pub fn get_default_shader(display: &Display) -> glium::Program {
     return glium::Program::from_source(display, VERTEX_SHADER, FRAGMENT_SHADER, None).unwrap();
 }
@@ -81,4 +99,8 @@ pub fn get_ambient_shader(display: &Display) -> glium::Program {
 
 pub fn get_specular_shader(display: &Display) -> glium::Program {
     return glium::Program::from_source(display, VERTEX_SHADER, SPECULAR_FRAGMENT_SHADER, None).unwrap();
+}
+
+pub fn get_colored_shader(display: &Display) -> glium::Program {
+    return glium::Program::from_source(display, VERTEX_SHADER, COLORED_FRAGMENT_SHADER, None).unwrap();
 }

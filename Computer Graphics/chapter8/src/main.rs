@@ -6,6 +6,7 @@ use gl::shader;
 use gl::action;
 use gl::models;
 use glium::glutin::event::ElementState;
+use glium::glutin::event::VirtualKeyCode;
 
 fn main() {
     #[allow(unused_imports)]
@@ -77,7 +78,12 @@ fn main() {
                         { action = action::Action::Stop; },
                     glutin::event::WindowEvent::KeyboardInput { device_id: _, input, is_synthetic:_ } =>
                         { match input.state {
-                            ElementState::Pressed => {step += 1;}
+                            ElementState::Pressed => {
+                                match input.virtual_keycode {
+                                    Some(VirtualKeyCode::Space) => {step += 1;}
+                                    _ => {}
+                                }
+                            }
                             _ => {}
                         } }
                     _ => (),

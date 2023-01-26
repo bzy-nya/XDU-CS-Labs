@@ -10,6 +10,7 @@ use gl::vertex::Vertex;
 use glium::Display;
 use glium::Surface;
 use glium::glutin::event::ElementState;
+use glium::glutin::event::VirtualKeyCode;
 
 fn matrix_mutiple(x: [[f32; 4]; 4], y: [[f32; 4]; 4]) -> [[f32; 4]; 4] {
     let mut ret = [
@@ -190,7 +191,6 @@ fn main() {
             }
         }
         
-        // handling the events received by the window since the last frame
         for e in events {
             match e {
                 glutin::event::Event::WindowEvent { event, .. } => match event {
@@ -198,7 +198,12 @@ fn main() {
                         { action = action::Action::Stop; },
                     glutin::event::WindowEvent::KeyboardInput { device_id: _, input, is_synthetic:_ } =>
                         { match input.state {
-                            ElementState::Pressed => {step += 1;}
+                            ElementState::Pressed => {
+                                match input.virtual_keycode {
+                                    Some(VirtualKeyCode::Space) => {step += 1;}
+                                    _ => {}
+                                }
+                            }
                             _ => {}
                         } }
                     _ => (),

@@ -9,3 +9,7 @@ pub fn cube(display: &Display) -> VertexBufferAny {
 pub fn teapot(display: &Display) -> VertexBufferAny {
     load_wavefront(display, include_bytes!("teapot.obj"))
 }
+
+pub fn sphere(display: &Display) -> VertexBufferAny {
+    load_wavefront(display, include_bytes!("sphere.obj"))
+}
